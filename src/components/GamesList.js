@@ -10,8 +10,13 @@ export default function GamesList() {
     return <Loading />;
   }
   if (games.length < 1) {
-    return <h2 className="section-title">no games found</h2>;
+    return (
+      <h2 className="section-title">
+        Please wait for 10 seconds and then type again
+      </h2>
+    );
   }
+
   return (
     <section className="section">
       <h2 className="section-title">game list </h2>
