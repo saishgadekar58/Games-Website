@@ -1,6 +1,6 @@
 {
   "name": "animeapi",
-  "proxy":"https://free-to-play-games-database.p.rapidapi.com/api/games?category=",
+  "proxy":"https://free-to-play-games-database.p.rapidapi.com/api/games?category=racing",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
