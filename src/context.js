@@ -12,12 +12,13 @@ const AppProvider = ({ children }) => {
     try {
       const response = await fetch(`${url}${searchTerm}`, {
         method: "GET",
+
         headers: {
-          "x-rapidapi-key":
-            "b655dfdea3msh19cdf43305f2661p1a10f4jsnad73f6cf4b48",
-          "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com",
+          "x-rapidapi-key": process.env.REACT_APP_KEY,
+          "x-rapidapi-host": process.env.REACT_APP_HOST,
         },
       });
+      console.log(process.env);
       const data = await response.json();
 
       if (!data.length < 1) {
