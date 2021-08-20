@@ -12,7 +12,6 @@ const AppProvider = ({ children }) => {
     try {
       const response = await fetch(`${url}${searchTerm}`, {
         method: "GET",
-
         headers: {
           "x-rapidapi-key": process.env.REACT_APP_KEY,
           "x-rapidapi-host": process.env.REACT_APP_HOST,
@@ -52,7 +51,10 @@ const AppProvider = ({ children }) => {
       } else {
         setGames([]);
       }
-      setLoading(false);
+      const t1 = setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+      return () => clearTimeout(t1);
     } catch (error) {
       console.log(error);
       setLoading(false);

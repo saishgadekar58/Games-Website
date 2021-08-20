@@ -6,7 +6,10 @@ const SearchForm = () => {
   const searchValue = useRef("");
 
   const searchGame = () => {
-    return setSearchTerm(searchValue.current.value);
+    const timer = setTimeout(() => {
+      setSearchTerm(searchValue.current.value);
+    }, 1000);
+    return () => clearTimeout(timer);
   };
 
   useEffect(() => {
