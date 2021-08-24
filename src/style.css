@@ -35,7 +35,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: var(--mainBlack);
-  background: var(--mainGrey);
+  background: rgb(131, 47, 131);
   line-height: 1.4;
   overflow-x: hidden !important;
   font-size: 1rem;
@@ -117,9 +117,10 @@ Buttons
 }
 .btn-details {
   padding: 0.25rem 0.4rem;
+  border-radius: 20px;
 }
 .btn-details:hover {
-  background: rgb(18, 216, 216);
+  background: rgba(18, 216, 216, 0.5);
   border-color: var(--primaryLightColor);
 }
 /* 
@@ -175,11 +176,14 @@ Navbar
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--maxWidth);
-  background: var(--mainWhite);
+  background: rgba(18, 216, 216, 0.5);
   padding: 2rem 2.5rem;
   text-transform: capitalize;
   border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
+}
+.form-control {
+  background-color: rgba(18, 216, 216, 0.5);
 }
 
 .form-control label {
@@ -187,7 +191,7 @@ Navbar
   margin-bottom: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.25rem;
-  color: var(--primaryColor);
+  color: #000;
 }
 .form-control input {
   width: 100%;
@@ -289,7 +293,7 @@ Navbar
 }
 /* /////game/////// */
 .game {
-  background: var(--mainWhite);
+  background: rgba(94, 117, 245, 0.5);
   margin-bottom: 2rem;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
@@ -318,7 +322,7 @@ Navbar
   font-size: 2rem;
 }
 .game-footer p {
-  color: var(--darkGrey);
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 /* /////////GameDetails//////// */
